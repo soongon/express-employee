@@ -1,11 +1,15 @@
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
+const connectToMongo = require('./dbutils/connect');
 const express = require('express');
 
 const employeeRouter = require('./routes/employeeRouter');
 const articleRouter = require('./routes/articleRouter');
 
 const logger = require('./middlewares/logger');
+
+// DB 접속 코드
+connectToMongo();
 
 const app = express();
 
