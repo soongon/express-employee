@@ -9,7 +9,10 @@ router.get('/', (req, res) => {
     {
       id: 1,
       name: 'kim',
-      addr: 'seoul',
+      addr: {
+        cidy: 'seoul',
+        detail: '종로구'
+      },
       position: '과장'
     },
     {
