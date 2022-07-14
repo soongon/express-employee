@@ -6,9 +6,10 @@ const employeeSchema = new Schema({
   id: {
     type: Number,
     required: true,
+    unique: true
   }, // String is shorthand for {type: String}
   name: {
-    type: Number,
+    type: String,
     required: true,
     default: 'noname'
   },
